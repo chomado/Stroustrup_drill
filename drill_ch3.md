@@ -161,10 +161,23 @@
 		3. NG 2_For_1_special
 		4. NG latest thing
 		5. NG the_$12_method
-		6. NG _this_is_ok
+		6. いちおうOK _this_is_ok // グローバルスコープを持つものはダメ
 		7. OK MiniMineMine
-		8. NG number
+		8. OK number // 予約語だと思ったけど普通に大丈夫だった
 		9. NG correct?  
+
+	メモ:
+```
+		int _a;   ← グローバルで使っちゃダメよ
+		int _A;   ← 絶対ダメ
+		int __a;  ← 絶対ダメ
+		int a__b; ← 絶対ダメ
+```
+	ダメ(reserved)なもの   
+	* グローバルスコープを持ち、_ で始まる名前
+	* _ で始まり、その次が大文字の名前
+	* __ を含む名前
+
 
 19. 有効な名前のうち, 混同されやすいので使用すべきではないものの例を5つ挙げよ
 	- 読書前の回答:
