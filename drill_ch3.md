@@ -45,9 +45,11 @@
   
 
 7. 次のコードを1行で記述するにはどうすればよいか  
+    ```cpp
      	    cout << "Hello, ";
      	    cout << first_name;
     	    cout << "!\n";
+    ```
 	- 読書前の回答: 
 		* `cout << "Hello, " << first_name << "!\n";`
 	- 読書後の回答:
@@ -88,7 +90,8 @@
 	- 読書後の回答:
 		* 1 byte, 4 byte, 8 byte    
 		* ↓ 確認用に書いたもの
-```cpp
+
+            ```cpp
        #include < iostream >
        using namespace std;
         int main()
@@ -97,7 +100,7 @@
                 cout << "int :   " << sizeof(int)    << endl;
                 cout << "double: " << sizeof(double) << endl;
          }
-```  
+            ```  
 
 13. int や string といった, メモリ内の小さな実体のサイズに使用する尺度は何か
 	- 読書前の回答:
@@ -167,12 +170,14 @@
 		9. NG correct?  
 
 	メモ:
-```
-		int _a;   ← グローバルで使っちゃダメよ
-		int _A;   ← 絶対ダメ
-		int __a;  ← 絶対ダメ
-		int a__b; ← 絶対ダメ
-```
+
+    ```cpp
+		int _a;   // ← グローバルで使っちゃダメよ
+		int _A;   // ← 絶対ダメ
+		int __a;  // ← 絶対ダメ
+		int a__b; // ← 絶対ダメ
+    ```
+
 	ダメ(reserved)なもの   
 	* グローバルスコープを持ち、_ で始まる名前
 	* _ で始まり、その次が大文字の名前
