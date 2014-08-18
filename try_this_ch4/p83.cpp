@@ -1,11 +1,10 @@
 #include <iostream>
+// while文を使って, 『対応する整数で文字の表を書き出してみよう』
 int main()
 {
-	for (int i=0; i<26; i++) {
-		std::cout << static_cast<char>('A'+ i) << '\t' << 'A'+i << (i%2 ? '\n':'\t');
-	}
-	std::cout << std::endl;
-	for (int i=0; i<26; i++) {
-		std::cout << static_cast<char>('a'+ i) << '\t' << 'a'+i << (i%2 ? '\n':'\t');
+	int i = 0;
+	while (i < 26) {
+		std::cout << static_cast<char>('a' + i) << '\t' << 'a' + i << (i%2 ? '\n':'\t');
+		i++;
 	}
 }
